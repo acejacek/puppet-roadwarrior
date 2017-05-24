@@ -29,7 +29,7 @@
 				<key>EnableCertificateRevocationCheck</key>
 				<integer>0</integer>
 				<key>EnablePFS</key>
-				<true/>
+				<integer>1</integer>
 				<key>IKESecurityAssociationParameters</key>
 				<dict>
 					<key>DiffieHellmanGroup</key>
@@ -52,11 +52,7 @@
 				<key>UseConfigurationAttributeInternalIPSubnet</key>
 				<integer>0</integer>
 			</dict>
-			<key>IPv4</key>
-			<dict>
-				<key>OverridePrimary</key>
-				<integer>1</integer>
-			</dict>
+
 			<key>PayloadDescription</key>
 			<string>Configures VPN settings</string>
 			<key>PayloadDisplayName</key>
@@ -80,6 +76,8 @@
 			<string><%= @vpn_name %></string>
 			<key>VPNType</key>
 			<string>IKEv2</string>
+			<key>OverridePrimary</key>
+			<true/>
 <% if @ondemand_connect -%>
 			<key>OnDemandEnabled</key>
 			<integer>1</integer>
